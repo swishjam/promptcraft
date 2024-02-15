@@ -1,7 +1,7 @@
 'use client'
 
 import { toast } from 'sonner'
-//import { swishjam } from '@swishjam/react'
+import { swishjam } from '@swishjam/react'
 import { Button } from "@/components/ui/button"
 import Logo from '@/components/logo'
 import React, { useEffect, useState } from 'react'
