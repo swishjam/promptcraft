@@ -4,11 +4,12 @@ import { Toaster } from "@/components/ui/sonner"
 
 export const metadata = {
   title: 'Promptcraft',
-  description: 'An Open-Source Hackable AI Chatbot Prompt Builder',
+  description: 'An Open-Source Hackable AI Prompt Builder',
   openGraph: {
-    title: 'Prompt Craft', 
+    title: 'Promptcraft', 
+    description: 'An Open-Source Hackable AI Prompt Builder',
     images: [{
-      url: '',
+      url: 'https://promptcraft.swishjam.com/og-x-fb.png',
       width: 1972,
       height: 1274,
     },], 
