@@ -8,11 +8,7 @@ export const metadata = {
   openGraph: {
     title: 'Promptcraft', 
     description: 'An Open-Source Hackable AI Prompt Builder',
-    images: [{
-      url: 'https://promptcraft.swishjam.com/og-x-fb.png',
-      width: 1972,
-      height: 1274,
-    },], 
+    images: ['https://promptcraft.swishjam.com/og-x-fb.png'], 
   }
 }
 
