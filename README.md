@@ -9,8 +9,6 @@
 <h3>
   Promptcraft is an open source prompt builder 
 </h3>
-
-</br>
 <a href="https://swishjam.com">
   Built by the team @ Swishjam.com — The brain for your SaaS
 </a>
