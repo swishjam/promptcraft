@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
           <meta name="robots" content="noindex" />
         </head>
         <body className="bg-gray-900">{children}</body>
-        <Toaster richColors />
+        <Toaster richColors position="top-right"/>
       </html>
     </SwishjamProvider>
   )

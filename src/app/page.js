@@ -2,7 +2,7 @@
 
 import { toast } from 'sonner'
 //import { swishjam } from '@swishjam/react'
-//import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button"
 import Logo from '@/components/logo'
 import React, { useEffect, useState } from 'react'
 import { motion } from "framer-motion"
@@ -42,33 +42,41 @@ export default function Home() {
     needs: needs,
     tasks: tasks,
     process: process,
-    exlusions: exclusions,
+    exclusions: exclusions,
     format: format,
     example: example,
   }})
- 
 
-  form.watch((data, {}) => {
-    console.log('logging data from form watch:') 
-    console.log(data)
+  useEffect(() => { 
+    console.log('logging data from use effect:', )
+    updateOutput({role, needs, tasks, process, exclusions, format, example})
+  }, [])
+
+
+  const updateOutput = (data) => {
     const promptText = `${data.role ? 'Act like a '+data.role+',' : ''}
       ${data.needs ? 'I need a '+data.needs+',' : ''}
       ${data.tasks ? 'you will '+data.tasks+',' : ''}
       ${data.process ? 'in the process, you should '+data.process+',' : ''}
-      ${data.exclusions ? 'please '+data.exlusions+',' : ''}
+      ${data.exclusions ? 'please '+data.exclusions+',' : ''}
       ${data.format ? 'output the final result in '+data.format+',' : ''}
       ${data.example ? 'here is an example: '+data.example+',' : ''}`;
-  
     setFullStr(promptText)
+  }
+
+  form.watch((data, {}) => {
+    console.log('logging data from form watch:') 
+    console.log(data)
+    updateOutput(data)
   })
 
   return (
-    <div className=''>
+    <div className='overflow-hidden'>
       <main className={`min-h-screen p-8 overflow-hidden dark mx-auto max-w-7xl grid grid-cols-2 gap-x-8 content-start`}>
-        <div className='col-span-2 mb-4'>
+        <div className='col-span-2 mb-2'>
           <h1 className="text-base font-semibold leading-7 text-white">Promptcraft</h1>
           <p className="mt-1 text-sm leading-6 text-gray-400">
-            An Open-Source Hackable AI Chatbot Prompt Builder <a href="https://github.com" className='flex items-center duration-300 transition-all cursor-pointer hover:text-emerald-500'>view on Github <LuArrowUpRight size={16} className='ml-1'/></a>
+            An Open-Source Hackable AI Chatbot Prompt Builder <a href="https://github.com/swishjam/promptcraft" className='flex items-center duration-300 transition-all cursor-pointer hover:text-emerald-500'>view on Github <LuArrowUpRight size={16} className='ml-1'/></a>
           </p>
         </div>
         <motion.div
@@ -247,6 +255,15 @@ export default function Home() {
               </div>
             </CopyToClipboard>
           </div>
+          <CopyToClipboard
+            text={encodeURI(`https://promptcraft.swishjam.com?role=${form.watch('role') || ''}&needs=${form.watch('needs') || ''}&tasks=${form.watch('tasks') || ''}&process=${form.watch('process') || ''}&exclusions=${form.watch('exclusions') || ''}&format=${form.watch('format') || ''}&example=${form.watch('example') || ''}`)}
+            onCopy={() => toast.success('Copied to clipboard')}
+          >
+            <Button className="mt-4" variant="">
+              <LuCopy className="w-4 h-4 mr-2" />
+              Copy Share Prompt Link
+            </Button>
+          </CopyToClipboard>
         </motion.div>
       </main>
       <div className='absolute bottom-8 right-8'>
