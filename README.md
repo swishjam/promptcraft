@@ -10,16 +10,19 @@
   Promptcraft is an open source prompt builder 
 </h3>
 
+</br>
 <a href="https://swishjam.com">
   Built by the team @ Swishjam.com — The brain for your SaaS
 </a>
 
 </br>
+</br>
 <img src="https://img.shields.io/badge/License-MIT-red.svg?style=flat-square" alt="MIT License">
-<a href="https://www.ycombinator.com/companies/langfuse"><img src="https://img.shields.io/badge/Y%20Combinator-W23-orange?style=flat-square" alt="Y Combinator W23"></a>
+<a href="https://www.ycombinator.com/companies/swishjam"><img src="https://img.shields.io/badge/Y%20Combinator-W23-orange?style=flat-square" alt="Y Combinator W23"></a>
 
+<div align="left" />
 
-## Technology Used
+## Technologies Used
 - Next.js
 - Shadcn/ui
 - Sonner
