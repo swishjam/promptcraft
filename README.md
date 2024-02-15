@@ -1,6 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![Promptcraft](https://raw.githubusercontent.com/swishjam/promptcraft/master/public/og-x-fb.png)
+
+<div align="center">
+  <a href="https://promptcraft.swishjam.com">
+    <h1>✨ Promptcraft</h1>
+  </a>
+<div>
+
+<h3>
+  Promptcraft is an open source prompt builder 
+</h3>
+
+<a href="https://swishjam.com">
+  Built by the team @ Swishjam.com — The brain for your SaaS
+</a>
+
+</br>
+<img src="https://img.shields.io/badge/License-MIT-red.svg?style=flat-square" alt="MIT License">
+<a href="https://www.ycombinator.com/companies/langfuse"><img src="https://img.shields.io/badge/Y%20Combinator-W23-orange?style=flat-square" alt="Y Combinator W23"></a>
+
+
+## Technology Used
+- Next.js
+- Shadcn/ui
+- Sonner
+- React Hook Form 
+- Framer Motion
+- Radix
+- React Icons
+- Swishjam (Analytics)
 
 ## Getting Started
+
+First install all the dependencies
+```bash
+npm install 
+```
 
 First, run the development server:
 

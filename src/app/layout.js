@@ -19,6 +19,8 @@ export default function RootLayout({ children }) {
         <head>
           <meta name="theme-color" content="#2e5e38" />
           <meta name="robots" content="noindex" />
+          <meta property="og:image" content='/og-x-fb.png' key="og:image" />
+          <meta name="twitter:image" content='/og-x-fb.png' />
         </head>
         <body className="bg-gray-900">{children}</body>
         <Toaster richColors position="top-right"/>
